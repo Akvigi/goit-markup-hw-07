@@ -1,0 +1,73 @@
+.sectionteam {
+  background-color: #f5f4fa;
+  max-width: 1600px;
+  padding: 94px 0;
+}
+
+.listteam {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+}
+
+li.e {
+  padding-right: 30px;
+  text-align: center;
+}
+
+.imgbord {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.border_team {
+  padding: 30px 0;
+}
+
+p.g {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.19;
+  color: var(--gray-color);
+}
+
+.ul-teamlinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transform: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  :focus {
+    background-color: var(--active-link-color);
+  }
+}
+
+.social-icon {
+  fill: var(--logo-color);
+  transform: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  :focus {
+    fill: var(--white-color);
+    .social-icon {
+      fill: var(--white-color);
+    }
+  }
+}
