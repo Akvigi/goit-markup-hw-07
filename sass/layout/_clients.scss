@@ -3,35 +3,37 @@
   max-width: 1600px;
 }
 
-.ul-clients {
+.clients__title {
+}
+
+.clients-list {
   margin: 50px 0 0 0;
   justify-content: center;
 }
 
-.link-clientlogo {
+.client-link {
   border: 1px solid var(--logo-color);
   border-radius: 4px;
   padding: 16px 32px;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  @extend %flex-align;
   transform: border-color;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
-  :focus {
+  &focus {
     border-color: var(--active-link-color);
-    .client-logo {
+    .client-link__logo {
       fill: var(--active-link-color);
     }
   }
 }
 
-.client-logo {
+.client-link__logo {
   fill: var(--logo-color);
   transform: fill;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.li-client:not(:last-child) {
+.clients-list__item:not(:last-child) {
   margin-right: 30px;
 }

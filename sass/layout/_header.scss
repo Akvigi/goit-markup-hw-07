@@ -3,12 +3,21 @@
   max-width: 1600px;
 }
 
-.listnav {
+.header__container {
+  @extend %flex-align;
+}
+
+.header__logo {
+  padding: 24px 93px 25px 0;
+  color: #000;
+}
+
+.site-list {
   list-style: none;
   display: flex;
 }
 
-.li_nav {
+.site-list__item {
   margin: 32px 50px 32px 0;
   &:last-child {
     margin-right: 0;
@@ -16,18 +25,16 @@
 }
 
 .link-all {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   transform: color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.linknav {
+.site-list__link {
+  @include font(14px, 500, 1.142, 0.02em);
   color: #212121;
   &:active,
-  :focus,
-  :hover {
+  &:focus,
+  &:hover {
     color: var(--active-link-color);
   }
 }
@@ -47,40 +54,41 @@
   }
 }
 
-.list_addres_header {
+.site-list-adress {
   list-style: none;
   display: flex;
   padding-left: 331px;
 }
 
-.li_adress_header {
+.site-list-adress__item {
   padding: 32px 0;
   &:first-child {
     margin-right: 50px;
   }
 }
 
-.linkadress {
+.site-list-adress__link {
   color: var(--gray-color);
+  @include font(14px, 500, 1.142, 0.02em);
   text-decoration: none;
   &:active,
-  :focus,
-  :hover {
+  &:focus,
+  &:hover {
     color: var(--active-link-color);
-    .addres-icon {
+    .site-list-adress__icon {
       fill: var(--active-link-color);
     }
   }
 }
 
-.addres-icon {
+.site-list-adress__icon {
   margin-right: 10px;
   fill: var(--gray-color);
-}
-
-.addres-icon-smart {
-  justify-content: center;
-  align-items: center;
   transform: fill;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adress-icon-smart {
+  justify-content: center;
+  align-items: center;
 }
